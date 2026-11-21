@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pion — identyfikacja wizualna</title>
+<meta name="description" content="Księga znaku firmy remontowej Pion: logo, kolory, typografia, zastosowania. Projekt koncepcyjny.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="../wp-content/themes/pion/assets/img/favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: Unbounded; src: url(../wp-content/themes/pion/assets/fonts/unbounded-latin.woff2) format("woff2"); font-weight: 300 800; unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Unbounded; src: url(../wp-content/themes/pion/assets/fonts/unbounded-latin-ext.woff2) format("woff2"); font-weight: 300 800; unicode-range: U+0100-02BA, U+1E00-1EFF; }
+@font-face { font-family: Unbounded; src: url(../wp-content/themes/pion/assets/fonts/unbounded-cyrillic.woff2) format("woff2"); font-weight: 300 800; unicode-range: U+0400-045F, U+0490-0491; }
+@font-face { font-family: Manrope; src: url(../wp-content/themes/pion/assets/fonts/manrope-latin.woff2) format("woff2"); font-weight: 400 800; unicode-range: U+0000-00FF, U+2000-206F; }
+@font-face { font-family: Manrope; src: url(../wp-content/themes/pion/assets/fonts/manrope-latin-ext.woff2) format("woff2"); font-weight: 400 800; unicode-range: U+0100-02BA, U+1E00-1EFF; }
+@font-face { font-family: Manrope; src: url(../wp-content/themes/pion/assets/fonts/manrope-cyrillic.woff2) format("woff2"); font-weight: 400 800; unicode-range: U+0400-045F, U+0490-0491; }
+:root { --ink: #1C2226; --plaster: #F2EFE9; --stone: #E4DED3; --muted: #5A6367; --accent: #C43E18; --accent-soft: #F6DED3; --line: #D6CFC2; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--plaster); color: var(--ink); font: 16px/1.55 Manrope, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: clamp(24px, 5vw, 56px) clamp(16px, 4vw, 40px); }
+.top { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 1rem; border-bottom: 2px solid var(--ink); padding-bottom: 1rem; margin-bottom: 2rem; }
+.top h1 { font: 600 clamp(1.4rem, 3vw, 2rem)/1.1 Unbounded, sans-serif; letter-spacing: -.02em; margin: 0; }
+.top p { margin: 0; color: var(--muted); font-size: .9rem; }
+.top a { color: var(--ink); font-weight: 700; }
+.grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 16px; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 24px; position: relative; overflow: hidden; }
+.label { font-size: .72rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin: 0 0 16px; }
+.span-12 { grid-column: span 12; } .span-8 { grid-column: span 8; } .span-7 { grid-column: span 7; } .span-6 { grid-column: span 6; } .span-5 { grid-column: span 5; } .span-4 { grid-column: span 4; } .span-3 { grid-column: span 3; }
+@media (max-width: 860px) { .span-8, .span-7, .span-6, .span-5, .span-4 { grid-column: span 12; } .span-3 { grid-column: span 6; } }
+
+/* Logo */
+.logo { display: inline-grid; grid-template-columns: auto auto; column-gap: .14em; align-items: center; color: var(--ink); line-height: 1; }
+.logo svg { width: .62em; height: .88em; }
+.logo b { font: 700 1em/1 Unbounded, sans-serif; letter-spacing: -.03em; }
+.hero { display: grid; place-items: center; min-height: 340px; background: var(--plaster); background-image: linear-gradient(var(--line) 1px, transparent 1px); background-size: 100% 40px; }
+.hero .logo { font-size: clamp(64px, 12vw, 132px); }
+.hero small { display: block; text-align: center; font-size: 15px; color: var(--muted); margin-top: 14px; letter-spacing: .02em; }
+.hero { padding-bottom: 64px; }
+.anat { position: absolute; left: 24px; bottom: 20px; right: 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; font-size: .8rem; color: var(--muted); }
+.variants { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.variants > div { border-radius: 6px; min-height: 130px; display: grid; place-items: center; font-size: 44px; }
+.v-dark { background: var(--ink); } .v-dark .logo { color: var(--plaster); }
+.v-accent { background: var(--accent); } .v-accent .logo { color: #fff; } .v-accent .logo { --bob: var(--ink); }
+.v-light { background: var(--stone); }
+@media (max-width: 560px) { .variants { grid-template-columns: 1fr; } }
+.marks { display: flex; gap: 18px; align-items: end; flex-wrap: wrap; }
+.marks figure { margin: 0; text-align: center; font-size: .75rem; color: var(--muted); }
+.app { width: 64px; height: 64px; border-radius: 14px; background: var(--ink); display: grid; place-items: center; }
+.app svg { width: 26px; height: 38px; color: var(--plaster); }
+.round { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; }
+.round svg { width: 24px; height: 35px; color: #fff; } .round { --bob: var(--ink); }
+.fav { width: 32px; height: 32px; } .fav16 { width: 16px; height: 16px; }
+
+/* Kolory */
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.sw { border-radius: 6px; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+.sw i { display: block; height: 84px; }
+.sw div { padding: 10px 12px; font-size: .8rem; }
+.sw strong { display: block; font-size: .92rem; }
+.sw code { color: var(--muted); font-family: ui-monospace, Menlo, monospace; font-size: .78rem; }
+
+/* Typografia */
+.type h3 { font: 600 44px/1.05 Unbounded, sans-serif; letter-spacing: -.02em; margin: 0 0 6px; }
+.type .meta { color: var(--muted); font-size: .85rem; margin: 0 0 18px; }
+.type .body { font-size: 18px; margin: 0; }
+.type .cyr { font: 600 22px/1.2 Unbounded, sans-serif; margin: 14px 0 0; color: var(--accent); }
+
+/* Wizytówka */
+.cards { display: flex; gap: 16px; flex-wrap: wrap; perspective: 900px; }
+.bc { width: 270px; aspect-ratio: 85 / 55; border-radius: 6px; padding: 18px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 28px rgba(28, 34, 38, .18); }
+.bc-front { background: var(--ink); color: var(--plaster); transform: rotate(-3deg); }
+.bc-front .logo { color: var(--plaster); font-size: 34px; }
+.bc-front p { margin: 0; font-size: .7rem; color: #AEB4B6; }
+.bc-back { background: #fff; transform: rotate(2deg); font-size: .78rem; line-height: 1.5; }
+.bc-back strong { font-size: .95rem; display: block; }
+.bc-back .rule { height: 3px; width: 28px; background: var(--accent); margin: 6px 0; }
+
+/* Elementy */
+.ui { display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px; border-radius: 4px; font-weight: 700; background: var(--accent); color: #fff; }
+.btn-o { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
+.eyebrow { display: inline-flex; align-items: center; gap: .55rem; font-size: .75rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.eyebrow::before { content: ""; width: 10px; height: 14px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 50% 100%); }
+.tag { font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; padding: .3rem .6rem; border-radius: 3px; background: var(--ink); color: #fff; }
+
+/* Mundur / auto */
+.van { background: var(--stone); display: grid; place-items: center; min-height: 230px; }
+.van svg { width: 100%; max-width: 440px; }
+.idea p { margin: 0 0 .75rem; }
+.idea p:last-child { margin: 0; color: var(--muted); font-size: .9rem; }
+footer { margin-top: 2rem; color: var(--muted); font-size: .82rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+	<symbol id="mark" viewBox="0 0 24 34"><path d="M12 1.5v7.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="10.6" r="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.5 13.4h13l-6.5 19z" fill="var(--bob, #C43E18)"/><path d="M5.5 13.4h13v2.6h-13z" fill="currentColor"/></symbol>
+</svg>
+<div class="wrap">
+	<header class="top">
+		<h1>Pion — identyfikacja wizualna</h1>
+		<p>Projekt koncepcyjny · <a href="../">Zobacz stronę firmy</a></p>
+	</header>
+
+	<div class="grid">
+		<section class="card span-8 hero" aria-label="Logo">
+			<div>
+				<span class="logo"><svg><use href="#mark"/></svg><b>pion</b></span>
+				<small>Remonty i wykończenia w Koszalinie</small>
+			</div>
+			<div class="anat"><span>Znak: pion murarski — narzędzie, które sprawdza, czy ściana jest prosta</span><span>Słowo: Unbounded 700, małe litery</span></div>
+		</section>
+		<section class="card span-4 idea">
+			<p class="label">Idea</p>
+			<p><strong>„Pion”</strong> to po polsku ciężarek na sznurku, którym fachowiec sprawdza, czy ściana stoi prosto. Każdy, kto remontował mieszkanie, zna to słowo.</p>
+			<p>Znak mówi jedno: <strong>u nas jest równo</strong>. Rdzawoczerwony kolor ciężarka pochodzi od minii, farby, którą zabezpiecza się stal na budowie.</p>
+			<p>Prosty kształt działa w każdym rozmiarze: od favicony 16 px po plandekę na rusztowaniu.</p>
+		</section>
+
+		<section class="card span-7">
+			<p class="label">Wersje logo</p>
+			<div class="variants">
+				<div class="v-light"><span class="logo"><svg><use href="#mark"/></svg><b>pion</b></span></div>
+				<div class="v-dark"><span class="logo"><svg><use href="#mark"/></svg><b>pion</b></span></div>
+				<div class="v-accent"><span class="logo"><svg><use href="#mark"/></svg><b>pion</b></span></div>
+			</div>
+		</section>
+		<section class="card span-5">
+			<p class="label">Sygnet i ikony</p>
+			<div class="marks">
+				<figure><div class="app"><svg><use href="#mark"/></svg></div><figcaption>Aplikacja / profil</figcaption></figure>
+				<figure><div class="round"><svg><use href="#mark"/></svg></div><figcaption>Facebook, Google Maps</figcaption></figure>
+				<figure><img class="fav" src="../wp-content/themes/pion/assets/img/favicon.svg" alt=""><figcaption>32 px</figcaption></figure>
+				<figure><img class="fav16" src="../wp-content/themes/pion/assets/img/favicon.svg" alt=""><figcaption>16 px</figcaption></figure>
+			</div>
+		</section>
+
+		<section class="card span-12">
+			<p class="label">Kolory</p>
+			<div class="swatches">
+				<div class="sw"><i style="background:#1C2226"></i><div><strong>Grafit</strong><code>#1C2226</code></div></div>
+				<div class="sw"><i style="background:#C43E18"></i><div><strong>Minia</strong><code>#C43E18</code></div></div>
+				<div class="sw"><i style="background:#F2EFE9"></i><div><strong>Tynk</strong><code>#F2EFE9</code></div></div>
+				<div class="sw"><i style="background:#E4DED3"></i><div><strong>Kamień</strong><code>#E4DED3</code></div></div>
+				<div class="sw"><i style="background:#5A6367"></i><div><strong>Szary</strong><code>#5A6367</code></div></div>
+				<div class="sw"><i style="background:#F6DED3"></i><div><strong>Minia jasna</strong><code>#F6DED3</code></div></div>
+			</div>
+		</section>
+
+		<section class="card span-6 type">
+			<p class="label">Nagłówki</p>
+			<h3>Unbounded</h3>
+			<p class="meta">Semibold 600 / Bold 700 · łacina i cyrylica</p>
+			<p class="body" style="font-family:Unbounded;font-weight:600;font-size:22px">Remont bez niespodzianek.</p>
+			<p class="cyr">Ремонт без сюрпризів.</p>
+		</section>
+		<section class="card span-6 type">
+			<p class="label">Tekst</p>
+			<h3 style="font-family:Manrope;font-weight:800">Manrope</h3>
+			<p class="meta">Regular 400 / Bold 700 / ExtraBold 800</p>
+			<p class="body">Cenę i termin zapisujemy w umowie, a postęp prac widzisz codziennie na zdjęciach.</p>
+			<p class="body" style="margin-top:8px">Ціну й термін записуємо в договір.</p>
+		</section>
+
+		<section class="card span-7">
+			<p class="label">Wizytówka 85 × 55 mm</p>
+			<div class="cards">
+				<div class="bc bc-front"><span class="logo"><svg><use href="#mark"/></svg><b>pion</b></span><p>Remonty i wykończenia · Koszalin</p></div>
+				<div class="bc bc-back"><div><strong>Andrij Kowalenko</strong><div class="rule"></div>kierownik robót</div><div>+48 94 000 00 00<br>biuro@pion.example<br>ul. Przemysłowa 00, Koszalin</div></div>
+			</div>
+		</section>
+		<section class="card span-5">
+			<p class="label">Elementy strony</p>
+			<div class="ui">
+				<span class="eyebrow">Realizacje</span>
+				<span class="btn">Oblicz koszt remontu</span>
+				<span class="btn btn-o">Zobacz realizacje</span>
+				<span><span class="tag">Przed</span> <span class="tag" style="background:#fff;color:#1C2226;box-shadow:inset 0 0 0 1px #D6CFC2">Po</span></span>
+			</div>
+		</section>
+
+		<section class="card span-12 van" aria-label="Oklejenie samochodu">
+			<svg viewBox="0 0 440 190" role="img" aria-label="Biały samochód dostawczy z logo Pion">
+				<rect x="20" y="30" width="300" height="120" rx="10" fill="#fff" stroke="#D6CFC2" stroke-width="2"/>
+				<path d="M320 60h48c10 0 18 5 24 13l22 32c3 5 5 10 5 16v19c0 6-4 10-10 10h-89z" fill="#fff" stroke="#D6CFC2" stroke-width="2"/>
+				<path d="M330 70h36c6 0 11 3 14 8l16 25h-66z" fill="#C9D3D6"/>
+				<rect x="20" y="118" width="300" height="10" fill="#C43E18"/>
+				<rect x="320" y="118" width="99" height="10" fill="#C43E18"/>
+				<circle cx="92" cy="152" r="22" fill="#1C2226"/><circle cx="92" cy="152" r="9" fill="#9AA2A5"/>
+				<circle cx="350" cy="152" r="22" fill="#1C2226"/><circle cx="350" cy="152" r="9" fill="#9AA2A5"/>
+				<g transform="translate(48 52)"><svg width="24" height="34" viewBox="0 0 24 34" color="#1C2226"><use href="#mark"/></svg></g>
+				<text x="80" y="80" font-family="Unbounded" font-weight="700" font-size="34" letter-spacing="-1" fill="#1C2226">pion</text>
+				<text x="50" y="104" font-family="Manrope" font-weight="700" font-size="12" fill="#5A6367">Remonty i wykończenia · +48 94 000 00 00</text>
+			</svg>
+		</section>
+	</div>
+
+	<footer><span>© Pion · projekt koncepcyjny, firma fikcyjna</span><span>Logo, kolory i strona: jeden spójny system</span></footer>
+</div>
+</body>
+</html>
