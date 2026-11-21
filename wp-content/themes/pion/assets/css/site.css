@@ -1,13 +1,13 @@
 /* Pion — style motywu. Kolory i fonty w theme.json, tu układ i komponenty. */
 :root {
 	--pn-ink: var(--wp--preset--color--ink, #1C2226);
-	--pn-plaster: var(--wp--preset--color--plaster, #F2EFE9);
+	--pn-plaster: var(--wp--preset--color--plaster, #FBF9F6);
 	--pn-surface: #fff;
-	--pn-stone: var(--wp--preset--color--stone, #E4DED3);
+	--pn-stone: var(--wp--preset--color--stone, #EEE8DF);
 	--pn-muted: var(--wp--preset--color--muted, #5A6367);
 	--pn-accent: var(--wp--preset--color--minium, #C43E18);
 	--pn-accent-soft: var(--wp--preset--color--minium-soft, #F6DED3);
-	--pn-line: var(--wp--preset--color--line, #D6CFC2);
+	--pn-line: var(--wp--preset--color--line, #E2DBD0);
 	--pn-display: var(--wp--preset--font-family--display, Unbounded, sans-serif);
 	--pn-radius: 6px;
 	--pn-wide: 1200px;
@@ -36,7 +36,7 @@ h1 em, h2 em { font-style: normal; color: var(--pn-accent); }
 
 /* ---------- Nagłówek ---------- */
 .wp-site-blocks > header { position: sticky; top: 0; z-index: 50; margin: 0; }
-.pn-header { background: rgba(242, 239, 233, .94); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--pn-line); }
+.pn-header { background: rgba(251, 249, 246, .92); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--pn-line); }
 .pn-header__in { max-width: var(--pn-wide); margin: 0 auto; padding: .75rem clamp(16px, 4vw, 40px); display: flex; align-items: center; gap: 1.5rem; }
 .pn-logo { display: inline-grid; grid-template-columns: auto auto; grid-template-rows: auto auto; column-gap: .55rem; align-items: center; color: var(--pn-ink); text-decoration: none; line-height: 1; }
 .pn-logo__mark { grid-row: 1 / 3; width: 22px; height: 31px; color: var(--pn-ink); }
@@ -86,8 +86,8 @@ main section.alignfull + section.alignfull { border-top: 1px solid var(--pn-line
 .pn-note { font-size: .88rem; color: var(--pn-muted); }
 
 /* Hero */
-.pn-hero { background: linear-gradient(var(--pn-line) 1px, transparent 1px) 0 0 / 100% 48px, var(--pn-plaster); background-blend-mode: normal; position: relative; }
-.pn-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, var(--pn-plaster) 0%, rgba(242, 239, 233, .82) 40%, var(--pn-plaster) 100%); pointer-events: none; }
+.pn-hero { background: radial-gradient(60% 80% at 85% 30%, #FBE3D6 0%, rgba(251, 227, 214, 0) 70%), radial-gradient(40% 60% at 0% 100%, #F3ECE1 0%, rgba(243, 236, 225, 0) 70%), #FFFDFB; position: relative; overflow: hidden; }
+.pn-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(rgba(196, 62, 24, .06) 1px, transparent 1px) 0 0 / 100% 48px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 60%); mask-image: linear-gradient(90deg, transparent, #000 60%); pointer-events: none; }
 .pn-hero > * { position: relative; }
 .pn-hero__cols { gap: clamp(2rem, 5vw, 4rem) !important; align-items: center !important; }
 .pn-hero h1 { margin: 0 0 1.1rem; font-size: clamp(1.7rem, 4.4vw, 3.1rem); }
@@ -107,7 +107,8 @@ main section.pn-strip + section { border-top: 0 !important; }
 
 /* Karty usług */
 .pn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0 !important; }
-.pn-card { background: var(--pn-surface); border: 1px solid var(--pn-line); border-radius: var(--pn-radius); padding: 1.5rem; transition: border-color .2s, transform .2s; }
+.pn-card { background: var(--pn-surface); border: 1px solid var(--pn-line); border-radius: var(--pn-radius); padding: 1.5rem; box-shadow: var(--pn-shadow); transition: border-color .2s, transform .2s, box-shadow .2s; }
+.pn-card:hover { box-shadow: 0 14px 34px rgba(28, 34, 38, .12); }
 .pn-card:hover { border-color: var(--pn-ink); transform: translateY(-2px); }
 .pn-card h3 { margin: .35rem 0 .5rem; }
 .pn-card p { margin: 0; color: var(--pn-muted); font-size: .96rem; }
@@ -130,7 +131,8 @@ main section.pn-band, main section.pn-band + section { border-top: 0 !important;
 .pn-facts div { background: var(--pn-surface); padding: .9rem 1rem; }
 .pn-facts dt { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--pn-muted); }
 .pn-facts dd { margin: .2rem 0 0; font-weight: 800; font-size: 1.05rem; }
-.pn-case:nth-of-type(even) { background: #ECE8E0; }
+.pn-case:nth-of-type(even) { background: #F5F0E8; }
+.pn-services, .pn-reviews { background: #F5F0E8; }
 
 /* Kroki */
 .pn-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0; margin-top: 2rem !important; counter-reset: s; border-top: 2px solid var(--pn-ink); }
@@ -142,7 +144,7 @@ main section.pn-band, main section.pn-band + section { border-top: 0 !important;
 
 /* Opinie */
 .pn-quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-top: 2rem !important; }
-.pn-quote { background: var(--pn-surface); border: 1px solid var(--pn-line); border-radius: var(--pn-radius); padding: 1.5rem; margin: 0; position: relative; }
+.pn-quote { background: var(--pn-surface); border: 1px solid var(--pn-line); border-radius: var(--pn-radius); padding: 1.5rem; margin: 0; position: relative; box-shadow: var(--pn-shadow); }
 .pn-quote::before { content: "★★★★★"; display: block; color: var(--pn-accent); letter-spacing: .15em; font-size: .9rem; margin-bottom: .75rem; }
 .pn-quote p { font-size: 1.02rem; margin: 0 0 1rem; }
 .pn-quote cite { font-style: normal; font-weight: 700; font-size: .88rem; color: var(--pn-muted); }
